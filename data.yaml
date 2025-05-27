@@ -1,0 +1,20 @@
+train: data/yolo/images/train/
+val: data/yolo/images/val/
+test: data/yolo/images/test/
+
+nc: 1  # Number of classes
+names: ['defect']  # Class names
+
+
+# 数据增强参数（仅用于训练）
+hsv_h: 0.1        # 色调变化
+hsv_s: 0.1          # 饱和度变化
+hsv_v: 0.1          # 明度变化
+degrees: 0.0          # 图像旋转角度（默认不旋转）
+translate: 0.1      # 平移比例
+scale: 0.0          # 缩放比例
+shear: 0            # 剪切变换
+flipud: 0.5        # 上下翻转概率（不需要可设为 0）
+fliplr: 0.5         # 左右翻转概率
+mosaic: 0.0         # Mosaic 增强开启
+mixup: 0.0          # MixUp 关闭（因为你是单目标检测）
